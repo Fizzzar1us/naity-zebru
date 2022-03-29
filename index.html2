@@ -1,0 +1,58 @@
+html
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		
+	</title>
+	<style type="text/css">
+		.items{
+			position: absolute;
+			height: 100px;
+			width: 100px;
+			top: 20px;
+			background-color: lawngreen;
+			border-radius: 20px;
+			border: 2px solid darkslategray;
+		}
+		.ierog{
+			position: absolute;
+			height: 100px;
+			width: 100px;
+			top: 200px;
+			left: 1500px;
+		}
+	</style>
+</head>
+<body>
+	<div style="background-image: url(https://st.renderu.com/art/449475); height: 600px; background-size: 100% 100%; padding-top: 400px;">
+		<div class="items" style="left: 20px; background-image: url(http://mykitai.ru/wp-content/uploads/2019/11/Ieroglif-sila.png);background-size: 100% 100%;">			
+		</div>
+		<div class="items" style="left: 220px;"></div>
+		<div class="items" style="left: 420px;"></div>
+		<div class="items" style="left: 620px;"></div>
+		<div class="items" style="left: 820px;"></div>
+		<div style="background-color: lawngreen; height: 300px; width: 200px; border-radius: 20px; padding-top: 30px; text-align: center;font-family: Arial;">
+
+		<h1 style="">Your score: <span class="showScore" style="font-size: 20px;"></span></h1>
+		</div>
+
+
+		<img class="ierog" src="http://mykitai.ru/wp-content/uploads/2019/11/Ieroglif-sila.png">
+	</div>
+	<script type="text/javascript">
+		let score = 0
+		document.querySelector(".ierog").onclick = function(){
+			alert("1")
+			document.querySelector(".ierog").style.display = "none"
+			score = score + 1;
+			document.querySelector(".showScore").innerHTML = score;
+			if(score == 1){
+				alert("ты победил")
+			}
+		}
+	</script>
+</body>
+</html>
